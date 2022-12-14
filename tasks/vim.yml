@@ -1,0 +1,11 @@
+---
+- name: system update
+  become: yes
+  pacman:
+    update_cache: yes
+    upgrade: yes
+
+- name: install vim
+  yay:
+    name: vim, neovim-git
+    state: present
